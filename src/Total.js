@@ -1,19 +1,20 @@
 import React from "react";
-import ExpenseItem from "./Components/ExpenseItem";
-import { ReactDOM } from "react";
 
-const total=0;
+
+var total=0;
 
 const Total=(props)=>{
-    // props.item.forEach(element => {
-    //     total+=element.amount;
-    // });
-    return(
-        <div><h2>{}</h2></div>
-                                    )
-                                    }
-    
-
+    total=0;
+    props.item.forEach(element => {
+        total+=parseInt(element.amount);
+    });
+    console.log(total);
+    // return<div className='expense-item'><h2>{total}</h2></div>}
+       return(<div>
+       <div className='expense-item_description' ><h2>Total</h2></div>
+            <div className='expense-item_price'> ${total}</div>
+                                                             </div> );
+}
 
 
 export default Total;

@@ -3,15 +3,16 @@ import './App.css';
 import NewExpense from "./Components/NewExpense";
 import RanderList from "./RanderList"
 import {useState} from 'react';
-import TotalExpense from "./Components/TotalExpense.js";
 import Total from "./Total";
 
-    let DUMMY_EXPENSES=[{
-    id: 1,
-    title: "School Fees",
-    amount: 250,
-    date: new Date(2022,3,22)  
-    },];
+    let DUMMY_EXPENSES=[
+    //     {
+    // id: 1,
+    // title: "School Fees",
+    // amount: 250,
+    // date: new Date(2022,3,22)  
+    // },
+];
 function App(){
     const[expenses,setExpenses]=useState(DUMMY_EXPENSES);
     const addExpenseHandler = (expense) =>{
